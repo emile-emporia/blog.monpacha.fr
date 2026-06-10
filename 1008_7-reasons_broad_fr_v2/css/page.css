@@ -2355,14 +2355,12 @@ button.cky-btn-revisit:not(:hover):not(:active) {
 }
 
 /* ===== FIX débordement horizontal mobile (09/06/2026) =====
-   Cause : les CTA (.hero-cta, .cta) sont en white-space:nowrap ; le texte
-   « Je commande mon 1er sac à -20% » fait ~352px sur une ligne. Sur écran
-   étroit ça (1) force la min-width du hero grid et déborde à droite,
-   (2) dépasse du bouton de l'offre (le -20% est coupé), et dans la section
-   désabo le flex en align-items:flex-start dimensionne la colonne sur ce
-   contenu et déborde aussi. html/body ont overflow-x:hidden → c'est rogné.
-   Fix : laisser les CTA passer à la ligne + laisser les pistes flex/grid
-   se réduire + étirer la colonne désabo. Scopé mobile, aucun impact desktop. */
+   Cause : CTA en white-space:nowrap (« Je commande mon 1er sac à -20% » ~352px
+   sur une ligne) -> force la largeur du hero grid (hors écran), dépasse du
+   bouton de l'offre (-20% coupé), et la colonne désabo (align-items:flex-start)
+   se dimensionne dessus. html/body en overflow-x:hidden -> contenu rogné.
+   Fix scopé mobile : laisser les CTA passer à la ligne, laisser les pistes
+   flex/grid se réduire, étirer la colonne désabo. Aucun impact desktop. */
 @media (max-width:880px){
   .pgt-page .hero-cta{ white-space:normal; }
   .pgt-page .cta{ white-space:normal; }
