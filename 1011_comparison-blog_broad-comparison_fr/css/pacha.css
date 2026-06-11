@@ -1,0 +1,81 @@
+/* Chrome compliance Pacha injecté par-dessus le markup Funnelish cloné
+   (n'altère pas la mise en page de core.css ; ne style QUE les éléments ajoutés) */
+
+/* badge publireportage — 1er enfant du body, discret au-dessus du bandeau noir */
+.pub-bar{background:#f4f4f5;color:#9a9aa2;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;text-align:center;padding:4px 12px;font-weight:400;border-bottom:1px solid #ececee;font-family:'Open Sans',system-ui,sans-serif;margin:0}
+@media(max-width:600px){.pub-bar{font-size:8px;padding:3px 10px;letter-spacing:.04em}}
+
+/* ===== footer légal / compliance ===== */
+.pacha-cf{background:#2a2a2e;color:#999;padding:32px 24px 90px;font-family:'Open Sans',system-ui,sans-serif}
+.pacha-cf-inner{max-width:640px;margin:0 auto;text-align:left}
+.pacha-cf-section{margin-bottom:18px}
+.pacha-cf h3{font-size:11px;font-weight:700;color:#c0c0c0;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px;line-height:1.3}
+.pacha-cf p{font-size:12px;line-height:1.6;color:#999;margin:0 0 6px}
+.pacha-cf a{color:#cbb6ff}
+.pacha-cf details{margin-top:22px;padding-top:16px;border-top:1px solid #3a3a3e}
+.pacha-cf details>summary{cursor:pointer;list-style:none;font-size:11px;font-weight:700;color:#c0c0c0;text-transform:uppercase;letter-spacing:.06em;padding:4px 0}
+.pacha-cf details>summary::-webkit-details-marker{display:none}
+.pacha-cf details>summary::after{content:' ▾';opacity:.7}
+.pacha-cf details[open]>summary::after{content:' ▴'}
+.pacha-cf .pacha-cf-refs{padding:10px 0 0}
+.pacha-cf .pacha-cf-refs p{font-size:11px;line-height:1.55;color:#888;margin:0 0 8px}
+.pacha-cf .pacha-cf-refs em{font-style:italic;color:#aaa}
+.pacha-cf-policies{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:12px;margin-top:22px;padding-top:16px;border-top:1px solid #3a3a3e}
+.pacha-cf-policies a{color:#aaa;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.pacha-cf-policies a:hover{color:#d4b8ff}
+.pacha-cf-policies span{color:#555}
+.pacha-cf-copyright{text-align:center;font-size:11px;color:#777;margin-top:18px}
+
+/* ===== bannière cookies ===== */
+#cookie-banner{position:fixed;bottom:0;left:0;width:100%;background:#f8f9fa;color:#212529;border-top:1px solid #e0e0e0;padding:10px;display:flex;justify-content:space-between;align-items:center;z-index:9999999999;box-shadow:0 -2px 5px rgba(0,0,0,.1);font-family:'Open Sans',system-ui,sans-serif;gap:10px}
+#cookie-banner p{margin:0;font-size:12px;flex:1}
+#cookie-banner .cookie-buttons{display:flex;gap:10px}
+#cookie-banner button{background:#3b3b3b;color:#fff;border:none;padding:8px 15px;border-radius:8px;cursor:pointer;font-size:14px}
+#cookie-banner button:hover{background:#3f337e}
+#cookie-banner a{text-decoration:underline;color:#3f337e !important;font-size:12px}
+@media(max-width:600px){#cookie-banner{flex-direction:column;align-items:stretch;text-align:center}#cookie-banner .cookie-buttons{justify-content:center}}
+
+/* ===== modal préférences cookies ===== */
+.cky-overlay{display:none;position:fixed;inset:0;background:rgba(20,16,40,.55);z-index:2147483646}
+.cky-modal{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:calc(100% - 32px);max-width:460px;max-height:88vh;overflow:auto;background:#fff;border-radius:16px;z-index:2147483647;box-shadow:0 20px 60px rgba(20,16,40,.35);font-family:'Open Sans',system-ui,sans-serif;color:#1f2330}
+.cky-modal.cky-modal-open{display:block}
+.cky-modal-inner{padding:22px 20px 18px;position:relative}
+.cky-modal h2{font-size:18px;font-weight:700;margin:0 0 8px;color:#1f2330}
+.cky-modal-intro{font-size:12.5px;line-height:1.5;color:#5b6072;margin:0 0 16px}
+.cky-btn-close{position:absolute;top:10px;right:12px;width:30px;height:30px;border:none;background:transparent;font-size:24px;line-height:1;color:#9aa0b0;cursor:pointer;border-radius:8px}
+.cky-btn-close:hover{background:#f1f1f4;color:#1f2330}
+.cky-cats{list-style:none;margin:0 0 18px;padding:0}
+.cky-cat{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #ececf1}
+.cky-cat:last-child{border-bottom:none}
+.cky-cat-txt strong{display:block;font-size:13.5px;font-weight:600;color:#1f2330}
+.cky-cat-txt span{display:block;font-size:11.5px;line-height:1.4;color:#7a7f90;margin-top:2px}
+.cky-switch{position:relative;flex:0 0 auto;width:42px;height:24px;display:inline-block}
+.cky-switch input{position:absolute;opacity:0;width:0;height:0}
+.cky-slider{position:absolute;inset:0;cursor:pointer;background:#cfd1da;border-radius:999px;transition:background .2s}
+.cky-slider::before{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.cky-switch input:checked + .cky-slider{background:#5a3ec8}
+.cky-switch input:checked + .cky-slider::before{transform:translateX(18px)}
+.cky-switch input:disabled + .cky-slider{background:#5a3ec8;opacity:.45;cursor:not-allowed}
+.cky-modal-actions{display:flex;flex-wrap:wrap;gap:8px}
+.cky-modal-actions button{flex:1 1 auto;min-width:120px;border:none;cursor:pointer;padding:10px 12px;border-radius:10px;font-size:13px;font-weight:600}
+.cky-btn-reject{background:#f1f1f4;color:#3a3f4f}
+.cky-btn-reject:hover{background:#e6e6ec}
+.cky-btn-preferences{background:#fff;color:#5a3ec8;border:1px solid #5a3ec8 !important}
+.cky-btn-preferences:hover{background:#f5f2ff}
+.cky-btn-accept{background:#5a3ec8;color:#fff}
+.cky-btn-accept:hover{background:#4a2db5}
+@media(max-width:420px){.cky-modal-actions button{flex:1 1 100%}}
+
+/* ===== modal vidéo désabonnement ===== */
+.desabo-link{color:#0a66c2;text-decoration:underline;cursor:pointer}
+.dz-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:2147483647;align-items:center;justify-content:center;padding:20px}
+.dz-overlay.open{display:flex}
+.dz-box{position:relative;background:#fff;border-radius:14px;max-width:420px;width:100%;padding:14px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.dz-box video{width:100%;border-radius:8px;display:block;background:#000;max-height:70vh}
+.dz-close{position:absolute;top:-14px;right:-14px;width:38px;height:38px;border-radius:50%;border:none;background:#fff;color:#111;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.dz-cap{font-size:13px;color:#555;margin:10px 2px 2px;text-align:center;font-family:'Open Sans',system-ui,sans-serif}
+
+/* ===== image de fold (table des 12 sacs) — collée au bandeau, pleine largeur mobile ===== */
+.fold-img{max-width:850px;margin:0 auto;padding:0;line-height:0;font-size:0}
+.fold-img img{width:100%;height:auto;display:block}
+@media(max-width:600px){ .fold-img{max-width:100%} }
