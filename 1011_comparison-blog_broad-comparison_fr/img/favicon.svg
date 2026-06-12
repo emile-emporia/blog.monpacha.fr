@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#000000"/>
+  <!-- toes -->
+  <ellipse cx="16.5" cy="28" rx="5.6" ry="7.6" fill="#ffffff"/>
+  <ellipse cx="27.5" cy="20.5" rx="6" ry="8.2" fill="#ffffff"/>
+  <ellipse cx="38.5" cy="20.5" rx="6" ry="8.2" fill="#ffffff"/>
+  <ellipse cx="49.5" cy="28" rx="5.6" ry="7.6" fill="#ffffff"/>
+  <!-- main pad (blog red accent) -->
+  <path d="M33 31.5 C 22.5 31.5, 17 41, 20.2 47.2 C 23.2 53, 30 54.2, 33 54.2 C 36 54.2, 42.8 53, 45.8 47.2 C 49 41, 43.5 31.5, 33 31.5 Z" fill="#eb0c0c"/>
+</svg>
